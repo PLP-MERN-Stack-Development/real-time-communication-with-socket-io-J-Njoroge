@@ -274,14 +274,11 @@ The application is fully responsive and works on:
 - [Express.js Documentation](https://expressjs.com/)
 - [Building a Chat Application with Socket.io](https://socket.io/get-started/chat)
 
-## 👤 Author
-
-J. Njoroge
-
-## 📄 License
-
-This project is part of a learning assignment.
 
 ---
 
-**Note**: This application is fully functional and ready for demonstration. All required features from the assignment have been implemented, plus several additional enhancements for a better user experience.
+## Screenshots
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
