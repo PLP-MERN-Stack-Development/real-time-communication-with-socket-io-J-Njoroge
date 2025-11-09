@@ -1,0 +1,30 @@
+# Server .gitignore (Node)
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime files
+/pids
+*.pid
+
+# Env
+.env
+.env.*
+
+# Build outputs
+dist/
+
+# Cache
+.cache
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

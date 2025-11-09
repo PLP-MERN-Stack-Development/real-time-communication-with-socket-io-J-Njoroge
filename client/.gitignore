@@ -1,0 +1,26 @@
+# Client .gitignore (Vite + React)
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+.vite/
+
+# Env
+.env
+.env.*
+
+# Logs
+*.log
+
+# Cache
+.cache
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

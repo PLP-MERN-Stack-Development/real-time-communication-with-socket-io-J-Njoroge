@@ -1,0 +1,44 @@
+.message-reactions {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.reaction-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 12px;
+}
+
+.reaction-badge:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.reaction-badge.reacted {
+  background: rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.reaction-emoji {
+  font-size: 14px;
+}
+
+.reaction-count {
+  font-weight: 600;
+  color: #666;
+  font-size: 11px;
+}
+
+.reaction-badge.reacted .reaction-count {
+  color: #667eea;
+}
+

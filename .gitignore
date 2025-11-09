@@ -1,0 +1,57 @@
+# Root .gitignore for repository
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Runtime data
+/pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+.env.*
+.env.local
+
+# Vite / build outputs
+/dist
+/.vite
+/build
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage and cache
+/coverage
+.cache
+
+# Misc
+*.pem
+*.crt
+
+# Ignore client and server specific build & node_modules
+/client/node_modules/
+/client/dist/
+/client/.vite/
+/client/.env
+
+/server/node_modules/
+/server/dist/
+/server/.env
