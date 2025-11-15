@@ -244,6 +244,37 @@ Before reporting an error, check:
 
 ---
 
+## 🧩 Deployment & CI files added
+
+I scanned the project README and the Week7 assignment and added a few useful files required for deployment and CI/CD. Please copy the examples to real `.env` files and fill values before deploying.
+
+- `server/.env.example` — environment variables for the server (copy to `server/.env`). Includes PORT, CLIENT_URL, ALLOWED_ORIGINS, MONGO_URI, etc.
+- `client/.env.example` — environment variables for the client (copy to `client/.env`). Includes `VITE_SOCKET_URL`.
+- `Procfile` — simple Heroku-style procfile (root) to run the server: `web: node server/server.js`.
+- `.github/workflows/ci.yml` — a basic GitHub Actions workflow that installs dependencies and builds the client on push/PR to `main`.
+
+How to use:
+
+1. Copy example env files to real ones:
+
+```powershell
+# Windows PowerShell
+copy server\.env.example server\.env
+copy client\.env.example client\.env
+```
+
+2. Fill in values (for example, set `MONGO_URI` to your MongoDB Atlas connection string).
+
+3. Commit and push. The CI workflow will run on `main` (you can change the branch in `.github/workflows/ci.yml`).
+
+If you'd like, I can also add:
+
+- A `Dockerfile` and `docker-compose.yml` for containerized deployment
+- A GitHub Actions `deploy` workflow (to Vercel, Netlify, Render, or Heroku)
+- A `.env.example` entry for any additional services you plan to use (Sentry, monitoring, etc.)
+
+---
+
 ## 🆘 Still Having Issues?
 
 If you're still getting errors:
