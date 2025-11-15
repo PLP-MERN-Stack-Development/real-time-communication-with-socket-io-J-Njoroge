@@ -16,16 +16,26 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 const server = http.createServer(app);
+// Build allowed origins list from environment (comma-separated)
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || process.env.ALLOWED_ORIGIN || '')
+  .split(',')
+  .map(origin => origin.trim())
+  .filter(Boolean);
+
+// sensible defaults for local development
+const defaultOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173'];
+const corsOrigins = allowedOrigins.length ? allowedOrigins : defaultOrigins;
+
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: corsOrigins,
     methods: ['GET', 'POST'],
     credentials: true,
   },
 });
 
-// Middleware
-app.use(cors());
+// Middleware (use same origins for Express CORS)
+app.use(cors({ origin: corsOrigins, methods: ['GET', 'POST'], credentials: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
